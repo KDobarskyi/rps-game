@@ -26,10 +26,11 @@ group = 'org.example.rps'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = 1.8
 
+
 spotless {
+    enforceCheck false
     java {
         licenseHeaderFile 'LICENSE'
-
         eclipse().configFile 'formatter.xml'
     }
 }

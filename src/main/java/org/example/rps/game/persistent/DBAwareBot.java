@@ -33,6 +33,7 @@ import java.util.Random;
 import java.util.stream.IntStream;
 
 @Component
+@SuppressWarnings("unchecked")
 public class DBAwareBot implements BotService {
 
     @Autowired
