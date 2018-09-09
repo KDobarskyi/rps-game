@@ -1,0 +1,52 @@
+buildscript {
+	ext {
+		springBootVersion = '2.1.0.M2'
+	}
+	repositories {
+		mavenCentral()
+		maven { url "https://repo.spring.io/snapshot" }
+		maven { url "https://repo.spring.io/milestone" }
+	}
+	dependencies {
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+	}
+}
+
+plugins {
+	id "org.sonarqube" version "2.6"
+    id "com.diffplug.gradle.spotless" version "3.14.0"
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+
+group = 'org.example.rps'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = 1.8
+
+spotless {
+    java {
+        licenseHeaderFile 'LICENSE'
+
+        eclipse().configFile 'formatter.xml'
+    }
+}
+
+repositories {
+	mavenCentral()
+	maven { url "https://repo.spring.io/milestone" }
+	maven { url "https://repo.spring.io/snapshot" }
+}
+
+
+dependencies {
+	compile('org.springframework.boot:spring-boot-starter-data-jpa')
+	compile('org.springframework.shell:spring-shell-starter:2.0.0.RELEASE')
+	runtime('org.hsqldb:hsqldb')
+	compileOnly('org.projectlombok:lombok')
+	testCompile('org.springframework.boot:spring-boot-starter-test')
+	testCompile('org.assertj:assertj-core:3+')
+	testCompile('com.github.stefanbirkner:system-rules:1+')
+}

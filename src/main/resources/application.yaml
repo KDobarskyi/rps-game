@@ -1,0 +1,8 @@
+logging.pattern.console: ~
+spring:
+    main.web-application-type: none
+    banner.location: classpath:banner.txt
+    shell.command:
+        quit.enabled: false
+        script.enabled: false
+        stacktrace.enabled: false

@@ -1,0 +1,21 @@
+language: java
+jdk: oraclejdk8
+sudo: false
+addons:
+  apt:
+    packages:
+    - oracle-java8-installer
+after_success:
+- "./gradlew sonarqube -Dsonar.projectKey=KDobarskyi_rps-game -Dsonar.organization=kdobarskyi-github
+  -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=adb8263264f97cbe82ce61617255f0768867c767"
+before_deploy:
+- export RELEASE_JAR_FILE=$(ls build/libs/*.jar)
+- echo "deploying ${RELEASE_JAR_FILE} to GitHub releases"
+deploy:
+  skip_cleanup: true
+  provider: releases
+  api_key: ${KEY}
+  file_glob: true
+  file: ${RELEASE_JAR_FILE}
+  on:
+    tags: true

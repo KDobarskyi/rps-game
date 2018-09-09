@@ -1,0 +1,26 @@
+______ ______  _____
+| ___ \| ___ \/  ___|
+| |_/ /| |_/ /\ `--.
+|    / |  __/  `--. \
+| |\ \ | |    /\__/ /
+\_| \_|\_|    \____/
+
+Welcome to the Rock-Paper-Scissors Game!
+
+Let's learn the nuts and bolts:
+
+    Basic commands
+        help
+        exit,
+        last (prints last moves)
+        restart
+        stats (prints current game statistics)
+
+    Moves:
+        r, rock     (rock beats scissors, but is beaten by paper)
+        p, paper    (paper beats rock, but is beaten by scissors)
+        s, scissors (scissors beats paper, but is beaten by rock)
+
+    hitting tab may autocomplete (if supported by your shell)
+
+Score changes after each turn, game continues until restarted or exited
