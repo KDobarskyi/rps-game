@@ -11,7 +11,7 @@ Let's learn the nuts and bolts:
 
     Basic commands
         help
-        exit,
+        exit, quit
         last (prints last moves)
         restart
         stats (prints current game statistics)
