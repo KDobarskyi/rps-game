@@ -1,5 +1,9 @@
 # RPS Game
 
+Build: [![Build Status](https://travis-ci.com/KDobarskyi/rps-game.svg?branch=master)](https://travis-ci.com/KDobarskyi/rps-game)
+Coverage: [![codecov](https://codecov.io/gh/KDobarskyi/rps-game/branch/master/graph/badge.svg)](https://codecov.io/gh/KDobarskyi/rps-game)
+SonarCloud: [![Quality Gate](https://sonarcloud.io/api/project_badges/measure?project=KDobarskyi_rps-game&metric=alert_status)](https://sonarcloud.io/api/project_badges/measure?project=KDobarskyi_rps-game&metric=alert_status)
+
 ### Run game
 
 ```console
