@@ -13,7 +13,7 @@ It is written in `Java` using `Spring Boot`, `Spring Shell`, and `Spring Data JP
 #### Bot
 Current version uses history-based heuristic to forecast player moves. During the first 3 rounds, it produces uniformly-distributed random moves. Starting from 4th round, bot is able to guess more precisely. 
 
-For illustrational purposes, every game round is stored in a database. Bot also shares same in-memory instance of `HSQLDB` and uses it as source for prediction. It employs variation of [Pushdown Automaton](https://en.wikipedia.org/wiki/Pushdown_automaton) also known as ["Shannon's Fortune Teller"](https://translate.google.com/translate?hl=en&sl=auto&tl=en&u=https%3A%2F%2Fsites.google.com%2Fsite%2Fltwood%2Fprojects%2Fheshby%2Fshannon) 
+For illustrational purposes, every game round is stored in a database. Bot also shares same in-memory instance of `HSQLDB` and uses it as source for prediction. It is inspired by variation of [Pushdown Automaton](https://en.wikipedia.org/wiki/Pushdown_automaton) also known as ["Shannon's Fortune Teller"](https://translate.google.com/translate?hl=en&sl=auto&tl=en&u=https%3A%2F%2Fsites.google.com%2Fsite%2Fltwood%2Fprojects%2Fheshby%2Fshannon) 
 
 ### Download
 
@@ -40,7 +40,7 @@ Once game loading finishes it also will print own shell prompt:
 
 `your turn>`
 
-Once you see it, you can start playing by typing `r`, `p`, or `s`
+After you see it, you can start playing by typing `r`, `p`, or `s`
 Type `exit` to quit the game or just `restart` to reset statistics
 
 
