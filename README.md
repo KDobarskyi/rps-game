@@ -6,14 +6,14 @@ SonarCloud: [![Quality Gate](https://sonarcloud.io/api/project_badges/measure?pr
 
 ### About
 
-This is Rock–Paper–Scissors game played in console against bot. 
+This is Rock–Paper–Scissors game played in console against bot. Idea was to develop game in less than 4 hours, code took actually near a hour and a half.
 
 It is written in `Java` using `Spring Boot`, `Spring Shell`, and `Spring Data JPA`
 
 #### Bot
-Current version uses history-based heuristic to forecast player moves. During the first 3 rounds, it produces uniformly-distributed random moves. Starting from 4th round bot is able to guess more precisely. 
+Current version uses history-based heuristic to forecast player moves. During the first 3 rounds, it produces uniformly-distributed random moves. Starting from 4th round, bot is able to guess more precisely. 
 
-For illustrational purposes, Bot logic uses in-memory database (`HSQLDB`). Variation of [Pushdown Automation](https://en.wikipedia.org/wiki/Pushdown_automaton) is built on top of it
+For illustrational purposes, every game round is stored in a database. Bot also shares same in-memory instance of `HSQLDB` and uses it as source for prediction. It employs variation of [Pushdown Automaton](https://en.wikipedia.org/wiki/Pushdown_automaton) also known as ["Shannon's Fortune Teller"](https://translate.google.com/translate?hl=en&sl=auto&tl=en&u=https%3A%2F%2Fsites.google.com%2Fsite%2Fltwood%2Fprojects%2Fheshby%2Fshannon) 
 
 ### Download
 
