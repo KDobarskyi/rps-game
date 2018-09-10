@@ -24,7 +24,7 @@ Type `exit` to quit the game or just `restart` to reset statistics
         restart         - restarts the game setting score to 0
         stats           - prints current game statistics
 
-    Moves:
+    Moves:  
         r, rock         - rock beats scissors, but is beaten by paper
         p, paper        - paper beats rock, but is beaten by scissors
         s, scissors     - scissors beats paper, but is beaten by rock

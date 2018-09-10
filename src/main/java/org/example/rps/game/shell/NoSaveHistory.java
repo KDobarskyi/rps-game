@@ -28,6 +28,6 @@ import java.io.IOException;
 public class NoSaveHistory extends DefaultHistory {
     @Override
     public void save() throws IOException {
-
+        //Don't do anything to prevent saving shell history
     }
 }

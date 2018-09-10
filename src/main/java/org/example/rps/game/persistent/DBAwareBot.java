@@ -51,12 +51,12 @@ public class DBAwareBot implements BotService {
                 return Move.SCISSORS;
             case ROCK:
                 return Move.PAPER;
+            default:
+                return Move.ROCK;
         }
-
-        return Move.ROCK;
     }
 
-    static Move randoMove() {
+    static Move randomMove() {
         return Move.values()[RAND.nextInt(Move.values().length)];
     }
 
@@ -64,8 +64,8 @@ public class DBAwareBot implements BotService {
     public Move makeMove(final long currentRound) {
 
         if (currentRound > 3) {
-            GameRound previousRound = roundRepository.findById(currentRound - 1).get();
-            GameRound roundBeforePrevious = roundRepository.findById(currentRound - 2).get();
+            GameRound previousRound = roundRepository.findById(currentRound - 1).orElseThrow(IllegalStateException::new);
+            GameRound roundBeforePrevious = roundRepository.findById(currentRound - 2).orElseThrow(IllegalStateException::new);
 
             Move complex = guessPlayerMoveByPlayerAndBotMoves(previousRound, roundBeforePrevious);
             if (complex != null) {
@@ -78,7 +78,7 @@ public class DBAwareBot implements BotService {
             }
         }
 
-        return randoMove();
+        return randomMove();
     }
 
     Move guessPlayerMoveByPlayerOnlyMoves(final GameRound previousRound,
@@ -112,7 +112,7 @@ public class DBAwareBot implements BotService {
                 .forEach(i -> query.setParameter(i + 1, paramValues[i]));
 
         List<Object> result = query.getResultList();
-        if (result.size() == 0) {
+        if (result.isEmpty()) {
             return null;
         }
 

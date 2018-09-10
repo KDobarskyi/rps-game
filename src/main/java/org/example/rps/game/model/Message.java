@@ -27,18 +27,18 @@ import java.text.MessageFormat;
 public class Message {
 
     @NonNull
-    String message;
+    String textWithPattern;
 
     @Getter(AccessLevel.NONE)
     Object[] data;
 
     @Override
     public String toString() {
-        return new MessageFormat(message).format(data);
+        return new MessageFormat(textWithPattern).format(data);
     }
 
-    public Message(final String message, final Object... data) {
-        this.message = message;
+    public Message(final String textWithPattern, final Object... data) {
+        this.textWithPattern = textWithPattern;
         this.data = data;
     }
 }

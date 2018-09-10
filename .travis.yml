@@ -6,6 +6,7 @@ addons:
     packages:
     - oracle-java8-installer
 after_success:
+- bash <(curl -s https://codecov.io/bash)
 - "./gradlew sonarqube -Dsonar.projectKey=KDobarskyi_rps-game -Dsonar.organization=kdobarskyi-github
   -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=adb8263264f97cbe82ce61617255f0768867c767"
 before_deploy:

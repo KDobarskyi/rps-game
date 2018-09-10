@@ -21,9 +21,7 @@
 package org.example.rps.game.persistent.dao;
 
 import org.example.rps.game.persistent.entity.GameRound;
-import org.springframework.data.domain.Pageable;
 import org.springframework.data.repository.CrudRepository;
-import java.util.List;
 
 public interface GameRoundRepository extends CrudRepository<GameRound, Long> {
     GameRound findTop1RoundByOrderByRoundDesc();
