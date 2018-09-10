@@ -4,11 +4,26 @@ Build: [![Build Status](https://travis-ci.com/KDobarskyi/rps-game.svg?branch=mas
 Coverage: [![codecov](https://codecov.io/gh/KDobarskyi/rps-game/branch/master/graph/badge.svg)](https://codecov.io/gh/KDobarskyi/rps-game)
 SonarCloud: [![Quality Gate](https://sonarcloud.io/api/project_badges/measure?project=KDobarskyi_rps-game&metric=alert_status)](https://sonarcloud.io/api/project_badges/measure?project=KDobarskyi_rps-game&metric=alert_status)
 
-### Run game
+### Download
 
+Latest release is available at <https://github.com/KDobarskyi/rps-game/releases/latest>
+
+#### v1.0.0
+Direct link to executable jar: <https://github.com/KDobarskyi/rps-game/releases/download/v1.0.0/game-1.0.0-SNAPSHOT.jar>
+Sources: <https://github.com/KDobarskyi/rps-game/archive/v1.0.0.zip>
+
+### Run Game
+
+#### Gradle
 ```console
 ./gradlew assemble; java -jar build/libs/game-1.0.0-SNAPSHOT.jar 
 ```
+
+#### Jar
+```console
+java -jar game-1.0.0-SNAPSHOT.jar
+```
+
 Banner with help info is printed immediately.
 Once game loading finishes it also will print own shell prompt:
 
@@ -19,7 +34,7 @@ Type `exit` to quit the game or just `restart` to reset statistics
 
 
 
-### Commands and moves
+### Commands and Moves
 
     Basic commands
         help            - prints help
