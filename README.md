@@ -4,6 +4,17 @@ Build: [![Build Status](https://travis-ci.com/KDobarskyi/rps-game.svg?branch=mas
 Coverage: [![codecov](https://codecov.io/gh/KDobarskyi/rps-game/branch/master/graph/badge.svg)](https://codecov.io/gh/KDobarskyi/rps-game)
 SonarCloud: [![Quality Gate](https://sonarcloud.io/api/project_badges/measure?project=KDobarskyi_rps-game&metric=alert_status)](https://sonarcloud.io/api/project_badges/measure?project=KDobarskyi_rps-game&metric=alert_status)
 
+### About
+
+This is Rock–Paper–Scissors game played in console against bot. 
+
+It is written in `Java` using `Spring Boot`, `Spring Shell`, and `Spring Data JPA`
+
+#### Bot
+Current version uses history-based heuristic to forecast player moves. During the first 3 rounds, it produces uniformly-distributed random moves. Starting from 4th round bot is able to guess more precisely. 
+
+For illustrational purposes, Bot logic uses in-memory database (`HSQLDB`). Variation of [Pushdown Automation](https://en.wikipedia.org/wiki/Pushdown_automaton) is built on top of it
+
 ### Download
 
 Latest release is available at <https://github.com/KDobarskyi/rps-game/releases/latest>
